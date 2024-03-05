@@ -94,7 +94,6 @@ for (let i = 0; i < category.length; i++) {
 }
 // brand experince section
 var swiper = new Swiper(".mySwiper4", {
-  slidesPerView: 3,
   spaceBetween: 0,
   loop: true,
   pagination: {
@@ -108,7 +107,7 @@ var swiper = new Swiper(".mySwiper4", {
   coverflowEffect: {
     rotate: 0,
     stretch: 50,
-    depth: 100,
+    depth: 200,
     modifier: 2,
     slideShadows: false,
   },
