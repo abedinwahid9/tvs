@@ -43,8 +43,6 @@ body {
 }
 /*banner slider style end */
 
-/*  */
-
 .swiper-slide2 {
   text-align: center;
   font-size: 18px;
@@ -52,4 +50,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* brand experience */
+.brandexperience {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 79% 95%, 0 100%, 0% 50%);
 }
