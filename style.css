@@ -59,5 +59,14 @@ body {
 
 /* WhyDeliveryCompaniesarechoosing */
 .WhyDeliveryCompaniesarechoosing {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 79% 95%, 0 100%, 0% 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 90%, 0 100%, 0% 50%);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  outline: none;
+  background: none;
 }
