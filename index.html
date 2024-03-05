@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- style css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <div class="bg-black shadow-md shadow-black lg:static sticky z-50">
+      <div
+        class="lg:flex lg:justify-between block items-center lg:py-7 lg:px-28 py-3 px-5"
+      >
+        <!-- logo -->
+        <div class="flex items-center gap-5 cursor-pointer">
+          <div id="toggle-btn" class="w-20 h-20 lg:hidden">
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 15.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z"
+                fill-rule="nonzero"
+                fill="#ffffff"
+              />
+            </svg>
+          </div>
+          <img
+            class="lg:w-28 lg:h-30 w-14 h-16"
+            src="./assets/logo/TVS-logo.png"
+            alt=""
+          />
+        </div>
+        <!-- nav link -->
+        <div class="lg:flex hidden navbarDropdown transition-all">
+          <ul class="flex lg:flex-row flex-col lg:mt-0 gap-6 mt-5">
+            <li>
+              <a href="#" class="text-white uppercase text-lg font-semibold"
+                >Our Products</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white uppercase text-lg font-semibold"
+                >Contact us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white uppercase text-lg font-semibold"
+                >About us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- button -->
+        <div class="lg:flex gap-2 lg:mt-0 mt-5 hidden navbarDropdown">
+          <a class="#">
+            <img
+              class="bg-[#f12b00] py-2 px-4 rounded-sm"
+              src="./assets/logo/Tvs Global.png"
+              alt=""
+          /></a>
+          <a
+            class="bg-[#f12b00] items-center px-1 flex gap-1 rounded-sm"
+            href="#"
+          >
+            <img class="w-9 h-6" src="./assets/logo/saudi-arabia.png" alt="" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path
+                d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414"
+                fill="#ffffff"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar end -->
+    <!-- banner section start -->
+    <div class="relative">
+      <div class="swiper mySwiper relative">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="img" src="./assets/banner/Banner.png" alt="" />
+            <a
+              class="absolute z-40 lg:bottom-28 lg:left-[10%] md:bottom-0 md:left-[15%] bottom-[50%] left-14 bg-[#f12b00] lg:text-2xl text-lg py-2 px-8 rounded-sm text-white font-bold"
+              >EXPLORE</a
+            >
+          </div>
+          <div class="swiper-slide">
+            <img class="img" src="./assets/banner/Asset 20.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class="img" src="./assets/banner/Asset 21.png" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-28 right-16 z-40 md:flex gap-3 hidden">
+          <div class="swiperbutton-prev bg-white p-3 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path
+                d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+              />
+            </svg>
+          </div>
+          <div class="swiperbutton-next bg-white p-3 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path
+                d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- banner section end -->
+    <!-- explore our vehicles start -->
+    <section class="container mx-auto lg:mt-10 md:mt-24 mt-8">
+      <h2
+        class="pt-4 uppercase text-center text-[#f12b00] text-5xl font-extrabold"
+      >
+        explore our vehicles
+      </h2>
+      <div
+        class="my-10 flex md:flex-row gap-5 items-center flex-col justify-between md:px-28 px-14"
+      >
+        <div class="flex gap-2">
+          <button
+            class="category py-2 px-1 border-b-2 border-[#f12b00] uppercase text-[#f12b00] text-xl font-extrabold"
+          >
+            motorcycles
+          </button>
+          <button
+            class="category py-2 px-1 uppercase text-[#f12b00] text-xl font-extrabold"
+          >
+            sccoters
+          </button>
+        </div>
+        <button
+          class="py-2 px-5 rounded-sm uppercase bg-[#f12b00] text-white text-xl font-extrabold"
+        >
+          view all
+        </button>
+        <!-- motorcycles -->
+      </div>
+      <div class="md:px-24 px-10 relative motorcycles">
+        <div
+          class="swiperbutton2-prev bg-white p-3 rounded-full absolute left-0 bottom-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+            />
+          </svg>
+        </div>
+        <div class="swiper mySwiper2 py-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+              >
+                <h2
+                  class="bg-black text-white text-3xl w-full text-center pt-10 pb-16"
+                >
+                  APACHE <br />
+                  RR310
+                </h2>
+                <img
+                  class="w-full px-5 py-10"
+                  src="./assets/bike/160 4V_Centre.png"
+                  alt=""
+                />
+                <div
+                  class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-5 pb-8"
+                >
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Engine.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      Engine
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      312.2 CC
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      34 PS
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      175 KG
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+                  >explore</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+              >
+                <h2
+                  class="bg-black text-white text-3xl w-full text-center pt-10 pb-16"
+                >
+                  APACHE <br />
+                  RTR 160 4V
+                </h2>
+                <img
+                  class="w-full px-5 py-10"
+                  src="./assets/bike/310.png"
+                  alt=""
+                />
+                <div
+                  class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-5 pb-8"
+                >
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Engine.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      Engine
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      159.7 CC
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      16.5 PS
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      143 kg
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+                  >explore</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+              >
+                <h2
+                  class="bg-black text-white text-3xl w-full text-center pt-10 pb-16"
+                >
+                  APACHE <br />
+                  RR310
+                </h2>
+                <img
+                  class="w-full px-5 py-10"
+                  src="./assets/bike/H150-listing home.webp"
+                  alt=""
+                />
+                <div
+                  class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-5 pb-8"
+                >
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Engine.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      Engine
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      147.49 CC
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      8.9 KW
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      122 KG
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+                  >explore</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+              >
+                <h2
+                  class="bg-black text-white text-3xl w-full text-center pt-10 pb-16"
+                >
+                  APACHE <br />
+                  RR310
+                </h2>
+                <img
+                  class="w-full px-5 py-10"
+                  src="./assets/bike/160 4V_Centre.png"
+                  alt=""
+                />
+                <div
+                  class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-5 pb-8"
+                >
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Engine.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      Engine
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      312.2 CC
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      34 PS
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      175 KG
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+                  >explore</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="swiperbutton2-next bg-white p-3 rounded-full absolute right-0 bottom-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- sccoters -->
+      <div class="px-24 relative sccoters hidden">
+        <div
+          class="swiperbutton3-prev bg-white p-3 rounded-full absolute left-0 bottom-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+            />
+          </svg>
+        </div>
+        <div class="swiper mySwiper3 py-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+              >
+                <h2
+                  class="bg-black text-white text-3xl w-full text-center pt-10 pb-16"
+                >
+                  APACHE <br />
+                  RR310
+                </h2>
+                <img
+                  class="w-full px-5 py-10"
+                  src="./assets/bike/160 4V_Centre.png"
+                  alt=""
+                />
+                <div
+                  class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-5 pb-8"
+                >
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Engine.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      Engine
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      312.2 CC
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      34 PS
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      175 KG
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+                  >explore</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+              >
+                <h2
+                  class="bg-black text-white text-3xl w-full text-center pt-10 pb-16"
+                >
+                  APACHE <br />
+                  RTR 160 4V
+                </h2>
+                <img
+                  class="w-full px-5 py-10"
+                  src="./assets/bike/310.png"
+                  alt=""
+                />
+                <div
+                  class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-5 pb-8"
+                >
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Engine.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      Engine
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      159.7 CC
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      16.5 PS
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      143 kg
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+                  >explore</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+              >
+                <h2
+                  class="bg-black text-white text-3xl w-full text-center pt-10 pb-16"
+                >
+                  APACHE <br />
+                  RR310
+                </h2>
+                <img
+                  class="w-full px-5 py-10"
+                  src="./assets/bike/H150-listing home.webp"
+                  alt=""
+                />
+                <div
+                  class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-5 pb-8"
+                >
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Engine.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      Engine
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      147.49 CC
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      8.9 KW
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      122 KG
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+                  >explore</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+              >
+                <h2
+                  class="bg-black text-white text-3xl w-full text-center pt-10 pb-16"
+                >
+                  APACHE <br />
+                  RR310
+                </h2>
+                <img
+                  class="w-full px-5 py-10"
+                  src="./assets/bike/160 4V_Centre.png"
+                  alt=""
+                />
+                <div
+                  class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-5 pb-8"
+                >
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Engine.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      Engine
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      312.2 CC
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      34 PS
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-1">
+                    <img
+                      class="w-7"
+                      src="./assets/explore your vechicle/Power.png"
+                      alt=""
+                    />
+                    <p class="uppercase text-sm montserrat font-semibold">
+                      power
+                    </p>
+                    <p
+                      class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+                    >
+                      175 KG
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+                  >explore</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="swiperbutton3-next bg-white p-3 rounded-full absolute right-0 bottom-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- explore our vehicles end -->
+
+    <!-- who we are start -->
+    <section class="my-16">
+      <div class="whowearesection md:py-32 py-48 relative z-20">
+        <div class="container mx-auto">
+          <h2
+            class="pt-10 uppercase text-center text-white text-5xl font-extrabold"
+          >
+            who we are
+          </h2>
+          <p
+            class="text-center md:p-10 p-5 text-md md:text-2xl text-white montserrat text"
+          >
+            TVS Motor Company is the third largest 2-wheeler manufacturer in the
+            world with
+            <br />
+            the revenue of over US$ 2.6 billion. It has an anual sale of more
+            than 3.2 million units and an <br />
+            anual capacity of over 5.7 million vehicles.
+          </p>
+          <div
+            class="py-11 flex md:flex-row flex-col justify-evenly items-center"
+          >
+            <div class="flex flex-col items-center">
+              <img class="w-28" src="./assets/who we are/Customer.png" alt="" />
+              <p
+                class="text-xl text-center mt-5 text-white montserrat font-bold"
+              >
+                50+ Million <br />
+                Happy Customers
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                class="w-28"
+                src="./assets/who we are/International.png"
+                alt=""
+              />
+              <p
+                class="text-xl text-center mt-5 text-white montserrat font-bold"
+              >
+                Truly <br />
+                International
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img class="w-28" src="./assets/who we are/Legacy.png" alt="" />
+              <p
+                class="text-xl text-center mt-5 text-white montserrat font-bold"
+              >
+                Legacy of 112 years <br />
+                of trust & Innovation
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- who we are end -->
+      <!-- brand experience start -->
+
+      <div class="bg-black relative -top-48 z-10">
+        <div class="pt-48">
+          <h2
+            class="pt-10 uppercase text-center text-white text-5xl font-extrabold"
+          >
+            Brand Experience
+          </h2>
+        </div>
+        <div class="container mx-auto md:px-16 px-0 py-16 bottom-12">
+          <div class="swiper mySwiper4 relative w-full">
+            <div
+              class="swiperbutton-prev4 bg-white p-3 rounded-full absolute left-10 bottom-1/2 z-50"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+                />
+              </svg>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide relative">
+                <img
+                  class="w-full"
+                  src="./assets/brand-experience/Apache-racing-experience.png"
+                  alt=""
+                />
+                <div class="absolute md:top-1/2 top-1/4 w-full">
+                  <p
+                    class="text-[#f12b00] md:text-5xl text-xs font-bold uppercase"
+                  >
+                    Apache racing <br />
+                    experience
+                  </p>
+                  <p class="text-white mt-3 text-[10px] montserrat">
+                    The flagship property of TVS racing & Apache,<br />
+                    provides a racing experience for the apache <br />
+                    customers & aims to impart riding & racing
+                    <br />
+                    techniques.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-full"
+                  src="./assets/brand-experience/Apache-racing-experience.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-full"
+                  src="./assets/brand-experience/One Make Championship.png"
+                  alt=""
+                />
+                <div class="absolute md:top-1/2 top-1/4 w-full">
+                  <p
+                    class="text-[#f12b00] md:text-5xl text-xs font-bold uppercase"
+                  >
+                    Apache racing <br />
+                    experience
+                  </p>
+                  <p class="text-white mt-3 text-[10px] montserrat">
+                    The flagship property of TVS racing & Apache,<br />
+                    provides a racing experience for the apache <br />
+                    customers & aims to impart riding & racing
+                    <br />
+                    techniques.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-full"
+                  src="./assets/brand-experience/Apache-owners-group.png"
+                  alt=""
+                />
+                <div class="absolute md:top-1/2 top-1/4 w-full">
+                  <p
+                    class="text-[#f12b00] md:text-5xl text-xs font-bold uppercase"
+                  >
+                    Apache racing <br />
+                    experience
+                  </p>
+                  <p class="text-white mt-3 text-[10px] montserrat">
+                    The flagship property of TVS racing & Apache,<br />
+                    provides a racing experience for the apache <br />
+                    customers & aims to impart riding & racing
+                    <br />
+                    techniques.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiperbutton-next4 bg-white p-3 rounded-full absolute right-10 bottom-1/2 z-50"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- brand experience end -->
+    </section>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- row js -->
+    <script src="./app.js"></script>
+  </body>
+</html>

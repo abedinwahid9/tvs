@@ -1,0 +1,55 @@
+/* fonts */
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+
+  font-style: normal;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+}
+
+.whowearesection {
+  background-color: red;
+  clip-path: polygon(23% 0, 100% 8%, 100% 100%, 75% 85%, 0 99%, 0 26%);
+}
+
+/* banner slider style start */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide .img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*banner slider style end */
+
+/*  */
+
+.swiper-slide2 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
