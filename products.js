@@ -31,7 +31,7 @@ for (let i = 0; i < category.length; i++) {
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 5,
-  spaceBetween: 5,
+  spaceBetween: 10,
   loop: true,
   direction: "vertical",
   pagination: {
@@ -46,7 +46,26 @@ var swiper = new Swiper(".mySwiper", {
 
 // dynamic bike show
 const bikeDisplay = document.querySelector(".bikedisplay");
-const swiperWrapper = document.querySelectorAll(".swiper-slide");
+const motorbike = document.querySelectorAll(".motorbike");
+const sccotersactive = document.querySelectorAll(".sccotersactive");
+
+motorbike.forEach((slide) => {
+  slide.addEventListener("click", () => {
+    motorbike.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slide.classList.add("active");
+  });
+});
+
+sccotersactive.forEach((slide) => {
+  slide.addEventListener("click", () => {
+    sccotersactive.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slide.classList.add("active");
+  });
+});
 
 const bikes = [
   {
@@ -74,7 +93,7 @@ const bikes = [
 
 let selectElement = "APACHE RR310";
 
-swiperWrapper.forEach((swiper) => {
+motorbike.forEach((swiper) => {
   swiper.addEventListener("click", (e) => {
     selectElement = e.target.parentElement.childNodes[1].innerText;
     bikeChange(selectElement);
@@ -151,3 +170,110 @@ function bikeChange(selectElement) {
   });
 }
 bikeChange(selectElement);
+
+// scooters
+const sccotersDisplay = document.querySelector(".sccotersdisplay");
+
+const scooters = [
+  {
+    name: "APACHE RR310",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    img: "./assets/sccooter/jupiter-listing-home.webp",
+  },
+  {
+    name: "APACHE RTR 160 4V",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    img: "./assets/sccooter/Ntorq-RE.png",
+  },
+  {
+    name: "hlx 150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+    img: "./assets/bike/H150-listing-home.webp",
+  },
+];
+
+let sccotersElement = "APACHE RR310";
+
+sccotersactive.forEach((swiper) => {
+  swiper.addEventListener("click", (e) => {
+    sccotersElement = e.target.parentElement.childNodes[1].innerText;
+    sccoterChange(sccotersElement);
+  });
+});
+
+function sccoterChange(selectElement) {
+  return scooters.forEach((sccoter) => {
+    if (selectElement == sccoter.name) {
+      sccotersDisplay.innerHTML = `  <div class="flex justify-evenly w-full">
+      <div class="flex flex-col items-center gap-2">
+        <img
+          class="md:w-16 w-10 md:h-14 h-9"
+          src="./assets/products-page/power.png"
+          alt=""
+        />
+        <p
+          class="uppercase md:text-lg text-base montserrat text-[#7A7A7A] font-semibold"
+        >
+          engine
+        </p>
+        <p
+          class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
+        >
+          ${sccoter.engine} CC
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img
+          class="md:w-16 w-10 md:h-14 h-9"
+          src="./assets//products-page/engine.png"
+          alt=""
+        />
+        <p
+          class="uppercase md:text-lg text-base montserrat text-[#7A7A7A] font-semibold"
+        >
+          power
+        </p>
+        <p
+          class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
+        >
+          ${sccoter.power} PS
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img
+          class="md:w-16 w-10 md:h-14 h-9"
+          src="./assets/products-page/compound.png  "
+          alt=""
+        />
+        <p
+          class="uppercase md:text-lg text-base montserrat text-[#7A7A7A] font-semibold"
+        >
+          weight
+        </p>
+        <p
+          class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
+        >
+          ${sccoter.weight} KG
+        </p>
+      </div>
+      </div>
+      <div>
+      <img src=${sccoter.img} alt="" />
+      </div>
+      <div>
+      <a
+        href="#"
+        class="bg-[#f12b00] lg:text-2xl text-sm py-2 md:px-8 px-4 rounded-sm text-white font-bold aos-init aos-animate"
+        >View details</a
+      >
+      </div>`;
+    }
+  });
+}
+sccoterChange(sccotersElement);

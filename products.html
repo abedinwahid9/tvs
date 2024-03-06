@@ -119,23 +119,23 @@
             sccoters
           </button>
         </div>
+        <!-- motorbike -->
         <div
-          class="flex lg:flex-row flex-col justify-around py-20 lg:px-0 md:px-20 px-10 gap-10"
+          class="flex motorcycles lg:flex-row flex-col justify-around py-20 lg:px-0 md:px-20 px-10 gap-10"
         >
           <div class="flex flex-col items-center gap-10">
-            <div class="swiperbuttonnext bg-white p-3 rounded-full w-12">
+            <div class="swiperbuttonprev bg-white p-3 rounded-full w-12">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
-                  d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+                  d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"
                 />
               </svg>
             </div>
-
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide motorbike bg-white active">
                   <div
-                    class="bg-white flex py-1 gap-3 px-6 items-center justify-between"
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
                   >
                     <h3 class="text-xl font-semibold rounded-sm">
                       APACHE RR310
@@ -143,9 +143,9 @@
                     <img class="w-32 h-24" src="./assets/bike/310.png" alt="" />
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide motorbike bg-white">
                   <div
-                    class="bg-white flex py-1 gap-3 px-6 items-center justify-between"
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
                   >
                     <h3 class="text-xl font-semibold rounded-sm">
                       APACHE RTR 160 4V
@@ -157,9 +157,9 @@
                     />
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide motorbike bg-white">
                   <div
-                    class="bg-white flex py-1 gap-3 px-6 items-center justify-between"
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
                   >
                     <h3 class="text-xl font-semibold rounded-sm">
                       hlx 150 5 gear
@@ -171,9 +171,9 @@
                     />
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide motorbike bg-white">
                   <div
-                    class="bg-white flex py-1 gap-3 px-6 items-center justify-between"
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
                   >
                     <h3 class="text-xl font-semibold rounded-sm">
                       APACHE RR310
@@ -181,9 +181,9 @@
                     <img class="w-32 h-24" src="./assets/bike/310.png" alt="" />
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide motorbike bg-white">
                   <div
-                    class="bg-white flex py-1 gap-3 px-6 items-center justify-between"
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
                   >
                     <h3 class="text-xl font-semibold rounded-sm">
                       APACHE RTR 160 4V
@@ -195,9 +195,9 @@
                     />
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide motorbike bg-white">
                   <div
-                    class="bg-white flex py-1 gap-3 px-6 items-center justify-between"
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
                   >
                     <h3 class="text-xl font-semibold rounded-sm">
                       hlx 150 5 gear
@@ -211,16 +211,131 @@
                 </div>
               </div>
             </div>
-
-            <div class="swiperbuttonprev bg-white p-3 rounded-full w-12">
+            <div class="swiperbuttonnext bg-white p-3 rounded-full w-12">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
-                  d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+                  d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"
                 />
               </svg>
             </div>
           </div>
+          <!-- dynamic bike display -->
           <div class="flex flex-col gap-10 items-center bikedisplay"></div>
+        </div>
+        <!-- sccoters -->
+        <div class="sccoters hidden">
+          <div
+            class="flex lg:flex-row flex-col justify-around py-20 lg:px-0 md:px-20 px-10 gap-10"
+          >
+            <div class="flex flex-col items-center gap-10">
+              <div class="swiperbuttonprev bg-white p-3 rounded-full w-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"
+                  />
+                </svg>
+              </div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide sccotersactive active bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        APACHE RR310
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/sccooter/jupiter-listing-home.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccotersactive bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        APACHE RTR 160 4V
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/sccooter/Ntorq-RE.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccotersactive bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        hlx 150 5 gear
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/bike/H150-listing-home.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccotersactive bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        APACHE RR310
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/sccooter/jupiter-listing-home.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccotersactive bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        APACHE RTR 160 4V
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/sccooter/Ntorq-RE.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccotersactive bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        hlx 150 5 gear
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/bike/H150-listing-home.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiperbuttonnext bg-white p-3 rounded-full w-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- dynamic sccoters display -->
+            <div
+              class="flex flex-col gap-10 items-center sccotersdisplay"
+            ></div>
+          </div>
         </div>
       </div>
     </main>
