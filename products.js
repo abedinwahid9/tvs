@@ -43,3 +43,111 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiperbuttonprev",
   },
 });
+
+// dynamic bike show
+const bikeDisplay = document.querySelector(".bikedisplay");
+const swiperWrapper = document.querySelectorAll(".swiper-slide");
+
+const bikes = [
+  {
+    name: "APACHE RR310",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    img: "./assets/bike/310.png",
+  },
+  {
+    name: "APACHE RTR 160 4V",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    img: "./assets/bike/160-4V-Centre.png",
+  },
+  {
+    name: "hlx 150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+    img: "./assets/bike/H150-listing-home.webp",
+  },
+];
+
+let selectElement = "APACHE RR310";
+
+swiperWrapper.forEach((swiper) => {
+  swiper.addEventListener("click", (e) => {
+    selectElement = e.target.parentElement.childNodes[1].innerText;
+    bikeChange(selectElement);
+  });
+});
+
+function bikeChange(selectElement) {
+  return bikes.forEach((bike) => {
+    if (selectElement == bike.name) {
+      bikeDisplay.innerHTML = `  <div class="flex justify-evenly w-full">
+      <div class="flex flex-col items-center gap-2">
+        <img
+          class="md:w-16 w-10 md:h-14 h-9"
+          src="./assets/products-page/power.png"
+          alt=""
+        />
+        <p
+          class="uppercase md:text-lg text-base montserrat text-[#7A7A7A] font-semibold"
+        >
+          engine
+        </p>
+        <p
+          class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
+        >
+          ${bike.engine} CC
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img
+          class="md:w-16 w-10 md:h-14 h-9"
+          src="./assets//products-page/engine.png"
+          alt=""
+        />
+        <p
+          class="uppercase md:text-lg text-base montserrat text-[#7A7A7A] font-semibold"
+        >
+          power
+        </p>
+        <p
+          class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
+        >
+          ${bike.power} PS
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img
+          class="md:w-16 w-10 md:h-14 h-9"
+          src="./assets/products-page/compound.png  "
+          alt=""
+        />
+        <p
+          class="uppercase md:text-lg text-base montserrat text-[#7A7A7A] font-semibold"
+        >
+          weight
+        </p>
+        <p
+          class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
+        >
+          ${bike.weight} KG
+        </p>
+      </div>
+      </div>
+      <div>
+      <img src=${bike.img} alt="" />
+      </div>
+      <div>
+      <a
+        href="#"
+        class="bg-[#f12b00] lg:text-2xl text-sm py-2 md:px-8 px-4 rounded-sm text-white font-bold aos-init aos-animate"
+        >View details</a
+      >
+      </div>`;
+    }
+  });
+}
+bikeChange(selectElement);
