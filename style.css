@@ -11,6 +11,19 @@ body {
   scroll-behavior: smooth;
 }
 
+.nav {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+}
+
+.static {
+  transform: translateY(-100%);
+}
+
+.fixed {
+  transform: translateY(0);
+}
+
 .whowearesection {
   background-color: red;
   clip-path: polygon(23% 0, 100% 8%, 100% 100%, 75% 85%, 0 99%, 0 26%);
@@ -35,8 +48,7 @@ body {
 .swiper-slide .img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100vh;
 }
 
 .swiper {
@@ -71,4 +83,8 @@ select {
   text-overflow: "";
   outline: none;
   background: none;
+}
+
+.brand-slide {
+  width: 400px !important;
 }

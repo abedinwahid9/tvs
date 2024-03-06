@@ -9,6 +9,21 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
+const nav = document.querySelector(".nav");
+
+function scrollNavhide() {
+  if (window.scrollY > 200) {
+    nav.style.transform = "translateY(-100%)";
+  } else {
+    nav.style.transform = "translateY(0)";
+  }
+}
+// Add an event listener to run the function when the page is scrolled
+window.addEventListener("scroll", scrollNavhide);
+
+// Call the function once initially to set the initial state
+scrollNavhide();
+
 // banner swiper carousel
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
@@ -115,4 +130,25 @@ var swiper = new Swiper(".mySwiper4", {
     nextEl: ".swiperbutton-next4",
     prevEl: ".swiperbutton-prev4",
   },
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+
+  function handleScroll() {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+        // You can do something when a section is in view
+        console.log(`Section ${section.id} is in view`);
+      }
+    });
+  }
+
+  window.addEventListener("scroll", handleScroll);
 });
