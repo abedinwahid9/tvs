@@ -34,12 +34,11 @@ body {
   width: 100%;
   height: 100%;
   user-select: none;
+  display: flex;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,6 +84,12 @@ select {
   background: none;
 }
 
-.brand-slide {
-  width: 400px !important;
+.mySwiper4 {
+  width: 70% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .mySwiper4 {
+    width: 100% !important;
+  }
 }
