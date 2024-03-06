@@ -1,3 +1,10 @@
+window.onload = function () {
+  motorbikeDynamic();
+  sccoterDynamic();
+  // Call the function once initially to set the initial state
+  scrollNavhide();
+};
+
 // navbar toggler
 const toggleBtn = document.querySelector("#toggle-btn");
 const navbarDropdown = document.querySelectorAll(".navbarDropdown");
@@ -20,9 +27,6 @@ function scrollNavhide() {
 }
 // Add an event listener to run the function when the page is scrolled
 window.addEventListener("scroll", scrollNavhide);
-
-// Call the function once initially to set the initial state
-scrollNavhide();
 
 // banner swiper carousel
 var swiper = new Swiper(".mySwiper", {
@@ -132,23 +136,193 @@ var swiper = new Swiper(".mySwiper4", {
   },
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section");
+// motorcycleSlide dynamic
+function motorbikeDynamic() {
+  const motorcycleSlide = document.querySelector(".motorcycleSlide");
+  const motorcycleData = [
+    {
+      name: "APACHE ",
+      modal: "RR310",
+      engine: 321.2,
+      power: 34,
+      weight: 175,
+      img: "./assets/bike/310.png",
+    },
+    {
+      name: "APACHE",
+      modal: "RTR 160 4V",
+      engine: 159.7,
+      power: 16.5,
+      weight: 143,
+      img: "./assets/bike/160-4V-Centre.png",
+    },
+    {
+      name: "hlx ",
+      modal: "150 5 gear",
+      engine: 147.49,
+      power: 8.9,
+      weight: 122,
+      img: "./assets/bike/H150-listing-home.webp",
+    },
+    {
+      name: "APACHE ",
+      modal: "RR310",
+      engine: 321.2,
+      power: 34,
+      weight: 175,
+      img: "./assets/bike/310.png",
+    },
+    {
+      name: "APACHE",
+      modal: "RTR 160 4V",
+      engine: 159.7,
+      power: 16.5,
+      weight: 143,
+      img: "./assets/bike/160-4V-Centre.png",
+    },
+    {
+      name: "hlx ",
+      modal: "150 5 gear",
+      engine: 147.49,
+      power: 8.9,
+      weight: 122,
+      img: "./assets/bike/H150-listing-home.webp",
+    },
+  ];
 
-  function handleScroll() {
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
+  commonVehicles(motorcycleData, motorcycleSlide);
+}
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
+function sccoterDynamic() {
+  const sccoterSlide = document.querySelector(".sccoterSlide");
+  const sccoterData = [
+    {
+      name: "APACHE ",
+      modal: "150 5 gear",
+      engine: 321.2,
+      power: 34,
+      weight: 175,
+      img: "./assets/sccooter/jupiter-listing-home.webp",
+    },
+    {
+      name: "hlx ",
+      modal: "150 5 gear",
+      engine: 159.7,
+      power: 16.5,
+      weight: 143,
+      img: "./assets/sccooter/Ntorq-RE.png",
+    },
+    {
+      name: "APACHE ",
+      modal: "150 5 gear",
+      engine: 147.49,
+      power: 8.9,
+      weight: 122,
+      img: "./assets/bike/H150-listing-home.webp",
+    },
+    {
+      name: "hlx ",
+      modal: "150 5 gear",
+      engine: 321.2,
+      power: 34,
+      weight: 175,
+      img: "./assets/sccooter/jupiter-listing-home.webp",
+    },
+    {
+      name: "APACHE ",
+      modal: "150 5 gear",
+      engine: 159.7,
+      power: 16.5,
+      weight: 143,
+      img: "./assets/sccooter/Ntorq-RE.png",
+    },
+    {
+      name: "hlx ",
+      modal: "150 5 gear",
+      engine: 147.49,
+      power: 8.9,
+      weight: 122,
+      img: "./assets/bike/H150-listing-home.webp",
+    },
+  ];
 
-      if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
-        // You can do something when a section is in view
-        console.log(`Section ${section.id} is in view`);
-      }
-    });
-  }
+  commonVehicles(sccoterData, sccoterSlide);
+}
 
-  window.addEventListener("scroll", handleScroll);
-});
+// common vehicle looping
+const commonVehicles = (vechicleData, vechileSlide) => {
+  const motorArr = vechicleData.map((vechicle) => {
+    return `<div class="swiper-slide">
+  <div
+    class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
+  >
+    <h2
+      class="bg-black text-white text-3xl w-full text-center pt-5 pb-6"
+    >
+      ${vechicle.name} <br/>${vechicle.modal}
+    </h2>
+    <img
+      class="w-full h-60 px-5 py-5"
+      src=${vechicle.img}
+      alt=""
+    />
+    <div
+      class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-3 pb-6"
+    >
+      <div class="flex flex-col items-center gap-1">
+        <img
+          class="w-7"
+          src="./assets/explore your vechicle/Engine.png"
+          alt=""
+        />
+        <p class="uppercase text-sm montserrat font-semibold">
+          Engine
+        </p>
+        <p
+          class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+        >
+          ${vechicle.engine} CC
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <img
+          class="w-7"
+          src="./assets/explore your vechicle/Power.png"
+          alt=""
+        />
+        <p class="uppercase text-sm montserrat font-semibold">
+          power
+        </p>
+        <p
+          class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+        >
+        ${vechicle.power} PS
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <img
+          class="w-7"
+          src="./assets/explore your vechicle/Weight.png"
+          alt=""
+        />
+        <p class="uppercase text-sm montserrat font-semibold">
+          weight
+        </p>
+        <p
+          class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
+        >
+        ${vechicle.weight} KG
+        </p>
+      </div>
+    </div>
+    <a
+      href="./products.html"
+      class="bg-[#f12b00] text-white font-bold uppercase py-1 px-3 rounded-sm absolute -bottom-4"
+      >explore</a
+    >
+  </div>
+  </div>`;
+  });
+
+  return (vechileSlide.innerHTML = motorArr.join());
+};
