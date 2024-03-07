@@ -147,6 +147,11 @@ function motorbikeDynamic() {
       power: 34,
       weight: 175,
       img: "./assets/bike/310.png",
+      imgColor: [
+        { color: "#f12b00" },
+        { color: "#000000" },
+        { color: "#0000FF" },
+      ],
     },
     {
       name: "APACHE",
@@ -163,6 +168,7 @@ function motorbikeDynamic() {
       power: 8.9,
       weight: 122,
       img: "./assets/bike/H150-listing-home.webp",
+      imgColor: [{ color: "#f12b00" }],
     },
     {
       name: "APACHE ",
@@ -251,21 +257,34 @@ function sccoterDynamic() {
 
 // common vehicle looping
 const commonVehicles = (vechicleData, vechileSlide) => {
-  const motorArr = vechicleData.map((vechicle) => {
-    return `<div class="swiper-slide">
+  const motorArr = vechicleData.map((vecicle, i) => {
+    let colorTagGroup;
+    if (vecicle.imgColor && vecicle.imgColor.length > 0) {
+      const colorTags = vecicle.imgColor.map((color) => {
+        return `<button key=${i} name="${color.color}" class="w-5 h-5 bg-[${color.color}] rounded-full cursor-pointer"></button>`;
+      });
+      colorTagGroup = colorTags.join("");
+    } else {
+      colorTagGroup = "";
+    }
+
+    return `<div key=${i} class="swiper-slide">
   <div
     class="bg-[#F1F1F1] flex flex-col justify-center items-center relative"
   >
     <h2
       class="bg-black text-white text-3xl w-full text-center pt-5 pb-6"
     >
-      ${vechicle.name} <br/>${vechicle.modal}
+      ${vecicle.name} <br/>${vecicle.modal}
     </h2>
     <img
       class="w-full h-60 px-5 py-5"
-      src=${vechicle.img}
+      src=${vecicle.img}
       alt=""
     />
+    <div class="my-2 flex gap-3 ">
+    ${colorTagGroup}
+    </div>
     <div
       class="flex justify-evenly w-full border-t-2 border-[#D5D5D5] pt-3 pb-6"
     >
@@ -281,7 +300,7 @@ const commonVehicles = (vechicleData, vechileSlide) => {
         <p
           class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
         >
-          ${vechicle.engine} CC
+          ${vecicle.engine} CC
         </p>
       </div>
       <div class="flex flex-col items-center gap-1">
@@ -296,7 +315,7 @@ const commonVehicles = (vechicleData, vechileSlide) => {
         <p
           class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
         >
-        ${vechicle.power} PS
+        ${vecicle.power} PS
         </p>
       </div>
       <div class="flex flex-col items-center gap-1">
@@ -311,7 +330,7 @@ const commonVehicles = (vechicleData, vechileSlide) => {
         <p
           class="uppercase text-xl text-[#f12b00] montserrat font-semibold"
         >
-        ${vechicle.weight} KG
+        ${vecicle.weight} KG
         </p>
       </div>
     </div>
