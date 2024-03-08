@@ -35,6 +35,13 @@ body {
   align-items: center;
 }
 
+.swiper-slide > div > img {
+  pointer-events: none;
+}
+.swiper-slide > div > h3 {
+  pointer-events: none;
+}
+
 .sccoter-swiper-slide {
   width: 380px !important;
   display: flex;

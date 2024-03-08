@@ -5,6 +5,192 @@ window.onload = function () {
   scrollNavhide();
 };
 
+// just manage this data for show vehicle
+const vecicleDataList = [
+  {
+    id: 1,
+    name: "APACHE ",
+    category: "motorbike",
+    modal: "RR310",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/310.png" },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+      { color: "#ffffff", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 2,
+    name: "APACHE",
+    category: "motorbike",
+    modal: "RTR 160 4V",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/160-4V-Centre.png" },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+      { color: "#0000FF", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 3,
+    name: "hlx ",
+    category: "motorbike",
+    modal: "150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/H150-listing-home.webp" },
+    ],
+  },
+  {
+    id: 4,
+    name: "APACHE ",
+    category: "motorbike",
+    modal: "RR310",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    imgWithColor: [
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+      { color: "#0000FF", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 5,
+    name: "APACHE",
+    category: "motorbike",
+    modal: "RTR 160 4V",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/160-4V-Centre.png" },
+    ],
+  },
+  {
+    id: 6,
+    name: "hlx ",
+    category: "motorbike",
+    modal: "150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/H150-listing-home.webp" },
+    ],
+  },
+  {
+    id: 7,
+    name: "APACHE ",
+    category: "sccoter",
+    modal: "150 5 gear",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    imgWithColor: [
+      {
+        color: "#8A8A8A",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+      {
+        color: "#000000",
+        img: "./assets/sccooter/Ntorq-RE.png",
+      },
+      { color: "#0000FF", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 8,
+    name: "hlx ",
+    category: "sccoter",
+    modal: "150 5 gear",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    imgWithColor: [
+      {
+        color: "#f12b00",
+        img: "./assets/sccooter/Ntorq-RE.png",
+      },
+      {
+        color: "#8A8A8A",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "APACHE ",
+    category: "sccoter",
+    modal: "150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+
+    imgWithColor: [
+      {
+        color: "#f12b00",
+        img: "./assets/bike/H150-listing-home.webp",
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: "APACHE ",
+    category: "sccoter",
+    modal: "150 5 gear",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    imgWithColor: [
+      {
+        color: "#f12b00",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+    ],
+  },
+  {
+    id: 11,
+    category: "sccoter",
+    name: "hlx ",
+    modal: "150 5 gear",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    imgWithColor: [
+      {
+        color: "#f12b00",
+        img: "./assets/sccooter/Ntorq-RE.png",
+      },
+    ],
+  },
+  {
+    id: 12,
+    category: "sccoter",
+    name: "APACHE ",
+    modal: "150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+
+    imgWithColor: [
+      {
+        color: "#f12b00",
+        img: "./assets/bike/H150-listing-home.webp",
+      },
+      {
+        color: "#f1f1f1",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+    ],
+  },
+];
+
 // navbar toggler
 const toggleBtn = document.querySelector("#toggle-btn");
 const navbarDropdown = document.querySelectorAll(".navbarDropdown");
@@ -140,79 +326,11 @@ var swiper = new Swiper(".mySwiper4", {
 // data add here color with img,name,id
 function motorbikeDynamic() {
   const motorcycleSlide = document.querySelector(".motorcycleSlide");
-  const motorcycleData = [
-    {
-      id: 1,
-      name: "APACHE ",
-      modal: "RR310",
-      engine: 321.2,
-      power: 34,
-      weight: 175,
-      imgWithColor: [
-        { color: "#f12b00", img: "./assets/bike/310.png" },
-        { color: "#000000", img: "./assets/bike/green-160.png" },
-        { color: "#0000FF", img: "./assets/bike/white-160.png" },
-      ],
-    },
-    {
-      id: 2,
-      name: "APACHE",
-      modal: "RTR 160 4V",
-      engine: 159.7,
-      power: 16.5,
-      weight: 143,
-      imgWithColor: [
-        { color: "#f12b00", img: "./assets/bike/160-4V-Centre.png" },
-        { color: "#000000", img: "./assets/bike/green-160.png" },
-        { color: "#0000FF", img: "./assets/bike/white-160.png" },
-      ],
-    },
-    {
-      id: 3,
-      name: "hlx ",
-      modal: "150 5 gear",
-      engine: 147.49,
-      power: 8.9,
-      weight: 122,
-      imgWithColor: [
-        { color: "#f12b00", img: "./assets/bike/H150-listing-home.webp" },
-      ],
-    },
-    {
-      id: 4,
-      name: "APACHE ",
-      modal: "RR310",
-      engine: 321.2,
-      power: 34,
-      weight: 175,
-      imgWithColor: [
-        { color: "#000000", img: "./assets/bike/green-160.png" },
-        { color: "#0000FF", img: "./assets/bike/white-160.png" },
-      ],
-    },
-    {
-      id: 5,
-      name: "APACHE",
-      modal: "RTR 160 4V",
-      engine: 159.7,
-      power: 16.5,
-      weight: 143,
-      imgWithColor: [
-        { color: "#f12b00", img: "./assets/bike/160-4V-Centre.png" },
-      ],
-    },
-    {
-      id: 6,
-      name: "hlx ",
-      modal: "150 5 gear",
-      engine: 147.49,
-      power: 8.9,
-      weight: 122,
-      imgWithColor: [
-        { color: "#f12b00", img: "./assets/bike/H150-listing-home.webp" },
-      ],
-    },
-  ];
+  const motorbikeData = vecicleDataList.filter((vecicleData) => {
+    return vecicleData.category === "motorbike";
+  });
+
+  const motorcycleData = motorbikeData;
   const motorBikebtn = "motorBikebtn";
   commonVehicles(motorcycleData, motorcycleSlide, motorBikebtn);
   colorChangeImgMotorcycle(motorcycleData);
@@ -221,107 +339,10 @@ function motorbikeDynamic() {
 // data add here color with img,name,id
 function sccoterDynamic() {
   const sccoterSlide = document.querySelector(".sccoterSlide");
-  const sccoterData = [
-    {
-      id: 1,
-      name: "APACHE ",
-      modal: "150 5 gear",
-      engine: 321.2,
-      power: 34,
-      weight: 175,
-      imgWithColor: [
-        {
-          color: "#f12b00",
-          img: "./assets/sccooter/jupiter-listing-home.webp",
-        },
-        {
-          color: "#000000",
-          img: "./assets/sccooter/Ntorq-RE.png",
-        },
-        { color: "#0000FF", img: "./assets/bike/white-160.png" },
-      ],
-    },
-    {
-      id: 2,
-      name: "hlx ",
-      modal: "150 5 gear",
-      engine: 159.7,
-      power: 16.5,
-      weight: 143,
-      imgWithColor: [
-        {
-          color: "#f12b00",
-          img: "./assets/sccooter/Ntorq-RE.png",
-        },
-        {
-          color: "#",
-          img: "./assets/sccooter/jupiter-listing-home.webp",
-        },
-      ],
-    },
-    {
-      id: 3,
-      name: "APACHE ",
-      modal: "150 5 gear",
-      engine: 147.49,
-      power: 8.9,
-      weight: 122,
+  const sccoterData = vecicleDataList.filter((vecicleData) => {
+    return vecicleData.category === "sccoter";
+  });
 
-      imgWithColor: [
-        {
-          color: "#f12b00",
-          img: "./assets/bike/H150-listing-home.webp",
-        },
-      ],
-    },
-    {
-      id: 4,
-      name: "APACHE ",
-      modal: "150 5 gear",
-      engine: 321.2,
-      power: 34,
-      weight: 175,
-      imgWithColor: [
-        {
-          color: "#f12b00",
-          img: "./assets/sccooter/jupiter-listing-home.webp",
-        },
-      ],
-    },
-    {
-      id: 5,
-      name: "hlx ",
-      modal: "150 5 gear",
-      engine: 159.7,
-      power: 16.5,
-      weight: 143,
-      imgWithColor: [
-        {
-          color: "#f12b00",
-          img: "./assets/sccooter/Ntorq-RE.png",
-        },
-      ],
-    },
-    {
-      id: 6,
-      name: "APACHE ",
-      modal: "150 5 gear",
-      engine: 147.49,
-      power: 8.9,
-      weight: 122,
-
-      imgWithColor: [
-        {
-          color: "#f12b00",
-          img: "./assets/bike/H150-listing-home.webp",
-        },
-        {
-          color: "#f1f1f1",
-          img: "./assets/sccooter/jupiter-listing-home.webp",
-        },
-      ],
-    },
-  ];
   const sccooterBtn = "sccooterBtn";
   commonVehicles(sccoterData, sccoterSlide, sccooterBtn);
   colorChangeImgScooter(sccoterData);
@@ -334,7 +355,6 @@ function colorChangeImgMotorcycle(motorcycleData) {
     btn.addEventListener("click", (e) => {
       const color = e.target.getAttribute("name");
       const id = e.target.getAttribute("id");
-      console.log(id, color);
       const parent = e.target.parentElement.parentElement;
       const imageElement = parent.querySelector("img");
 
@@ -357,7 +377,7 @@ function colorChangeImgMotorcycle(motorcycleData) {
 }
 function colorChangeImgScooter(scooterData) {
   const colorBtn = document.querySelectorAll(".sccooterBtn");
-  console.log(colorBtn);
+
   colorBtn.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const color = e.target.getAttribute("name");
