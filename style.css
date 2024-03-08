@@ -16,6 +16,12 @@ body {
   transform: translateY(0);
 }
 
+.iti {
+  width: 100% !important;
+}
+input:focus {
+  outline: none;
+}
 .static {
   transform: translateY(-100%);
 }
