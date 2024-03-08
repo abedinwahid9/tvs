@@ -1,3 +1,195 @@
+// change this array data
+const vecicleDataList = [
+  {
+    id: 1,
+    name: "APACHE ",
+    category: "motorbike",
+    modal: "RR310",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/310.png" },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+      { color: "#ffffff", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 2,
+    name: "APACHE",
+    category: "motorbike",
+    modal: "RTR 160 4V",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/160-4V-Centre.png" },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+      { color: "#0000FF", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 3,
+    name: "hlx ",
+    category: "motorbike",
+    modal: "150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/H150-listing-home.webp" },
+      { color: "#0000FF", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 4,
+    name: "APACHE ",
+    category: "motorbike",
+    modal: "RR310",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    imgWithColor: [
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+      { color: "#0000FF", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 5,
+    name: "APACHE",
+    category: "motorbike",
+    modal: "RTR 160 4V",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/160-4V-Centre.png" },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+    ],
+  },
+  {
+    id: 6,
+    name: "hlx ",
+    category: "motorbike",
+    modal: "150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+    imgWithColor: [
+      { color: "#f12b00", img: "./assets/bike/H150-listing-home.webp" },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+    ],
+  },
+  {
+    id: 7,
+    name: "APACHE ",
+    category: "sccoter",
+    modal: "RR310",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    imgWithColor: [
+      {
+        color: "#8A8A8A",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+
+      { color: "#0000FF", img: "./assets/bike/white-160.png" },
+    ],
+  },
+  {
+    id: 8,
+    name: "APACHE ",
+    category: "sccoter",
+    modal: "RTR 160 4V",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    imgWithColor: [
+      {
+        color: "#f1f1f1",
+        img: "./assets/sccooter/Ntorq-RE.png",
+      },
+      {
+        color: "#8A8A8A",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "APACHE ",
+    category: "sccoter",
+    modal: "RR310",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+
+    imgWithColor: [
+      {
+        color: "#f1f1f1",
+        img: "./assets/bike/H150-listing-home.webp",
+      },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+    ],
+  },
+  {
+    id: 10,
+    name: "APACHE ",
+    category: "sccoter",
+    modal: "150 5 gear",
+    engine: 321.2,
+    power: 34,
+    weight: 175,
+    imgWithColor: [
+      {
+        color: "#f1f1f1",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+      {
+        color: "#f1f1f1",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+    ],
+  },
+  {
+    id: 11,
+    category: "sccoter",
+    name: "hlx ",
+    modal: "150 5 gear",
+    engine: 159.7,
+    power: 16.5,
+    weight: 143,
+    imgWithColor: [
+      {
+        color: "#f12b00",
+        img: "./assets/sccooter/Ntorq-RE.png",
+      },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
+    ],
+  },
+  {
+    id: 12,
+    category: "sccoter",
+    name: "APACHE ",
+    modal: "150 5 gear",
+    engine: 147.49,
+    power: 8.9,
+    weight: 122,
+
+    imgWithColor: [
+      {
+        color: "#f12b00",
+        img: "./assets/bike/H150-listing-home.webp",
+      },
+      {
+        color: "#f1f1f1",
+        img: "./assets/sccooter/jupiter-listing-home.webp",
+      },
+    ],
+  },
+];
+
 // explore our vechiles tab functionality
 const category = document.querySelectorAll(".category");
 
@@ -67,43 +259,52 @@ sccotersactive.forEach((slide) => {
   });
 });
 
-const bikes = [
-  {
-    name: "APACHE RR310",
-    engine: 321.2,
-    power: 34,
-    weight: 175,
-    img: "./assets/bike/310.png",
-  },
-  {
-    name: "APACHE RTR 160 4V",
-    engine: 159.7,
-    power: 16.5,
-    weight: 143,
-    img: "./assets/bike/160-4V-Centre.png",
-  },
-  {
-    name: "hlx 150 5 gear",
-    engine: 147.49,
-    power: 8.9,
-    weight: 122,
-    img: "./assets/bike/H150-listing-home.webp",
-  },
-];
-
-let selectElement = "APACHE RR310";
-
-motorbike.forEach((swiper) => {
-  swiper.addEventListener("click", (e) => {
-    selectElement = e.target.parentElement.childNodes[1].innerText;
-    bikeChange(selectElement);
-  });
+const bikes = vecicleDataList.filter((vecicleData) => {
+  return vecicleData.category === "motorbike";
 });
 
-function bikeChange(selectElement) {
-  return bikes.forEach((bike) => {
-    if (selectElement == bike.name) {
-      bikeDisplay.innerHTML = `  <div class="flex justify-evenly w-full">
+function bikeSwipers() {
+  const bikeDisplay = document.getElementById("bikeDisplay");
+  const motorbikeSwipers = document.querySelectorAll(".motorbike-swiper");
+
+  motorbikeSwipers.forEach((swiper) => {
+    swiper.addEventListener("click", (e) => {
+      motorbikeSwipers.forEach((otherSwiper) => {
+        otherSwiper.classList.remove("active");
+      });
+
+      swiper.classList.add("active");
+
+      const selectedBikeName = e.currentTarget
+        .querySelector("h3")
+        .innerText.split(" ")
+        .join("");
+
+      updateBikeDisplay(selectedBikeName);
+      bikeimgChangeByColor();
+    });
+  });
+
+  if (bikes.length > 0) {
+    const firstBikeName = (bikes[0].name + bikes[0].modal).split(" ").join("");
+    updateBikeDisplay(firstBikeName);
+  }
+
+  function updateBikeDisplay(selectedBikeName) {
+    const selectedBike = bikes.find((bike) => {
+      const bikeName = (bike.name + bike.modal).split(" ").join("");
+      return selectedBikeName === bikeName;
+    });
+
+    const colorBTngroup = selectedBike.imgWithColor
+      .map(
+        (color) =>
+          `<button id=${selectedBike.id} name="${color.color}" class="w-5 h-5 bg-[${color.color}]  bikeColorBtn  rounded-full cursor-pointer"></buttonname=>`
+      )
+      .join(" ");
+
+    if (selectedBike) {
+      bikeDisplay.innerHTML = `  <div ${selectedBike.id} class="flex justify-evenly w-full ">
       <div class="flex flex-col items-center gap-2">
         <img
           class="md:w-16 w-10 md:h-14 h-9"
@@ -118,7 +319,7 @@ function bikeChange(selectElement) {
         <p
           class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
         >
-          ${bike.engine} CC
+          ${selectedBike.engine} CC
         </p>
       </div>
       <div class="flex flex-col items-center gap-2">
@@ -135,7 +336,7 @@ function bikeChange(selectElement) {
         <p
           class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
         >
-          ${bike.power} PS
+          ${selectedBike.power} PS
         </p>
       </div>
       <div class="flex flex-col items-center gap-2">
@@ -152,13 +353,16 @@ function bikeChange(selectElement) {
         <p
           class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
         >
-          ${bike.weight} KG
+          ${selectedBike.weight} KG
         </p>
       </div>
       </div>
       <div>
-      <img src=${bike.img} alt="" />
+      <img class="bikeImg w-[600px] h-[360px]" src=${selectedBike.imgWithColor[0].img} alt="" />
       </div>
+      <div class=" flex gap-2 ">
+      ${colorBTngroup}
+    </div>
       <div>
       <a
         href="#"
@@ -167,50 +371,90 @@ function bikeChange(selectElement) {
       >
       </div>`;
     }
+  }
+}
+bikeSwipers();
+bikeimgChangeByColor();
+
+// bikeimgChangeByColor
+function bikeimgChangeByColor() {
+  const bikeColorBtn = document.querySelectorAll("#bikeDisplay .bikeColorBtn");
+
+  bikeColorBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const color = e.target.getAttribute("name");
+      const id = e.target.getAttribute("id");
+      const parent = e.target.parentElement.parentElement;
+      const imageElement = parent.querySelector(".bikeImg");
+
+      const imageData = bikes.find(
+        (bike) =>
+          bike.id === parseInt(id) &&
+          bike.imgWithColor.some((c) => c.color === color)
+      );
+
+      if (imageData) {
+        const selectedColorImage = imageData.imgWithColor.find(
+          (c) => c.color === color
+        );
+
+        if (imageElement && selectedColorImage) {
+          imageElement.src = selectedColorImage.img;
+        }
+      }
+    });
   });
 }
-bikeChange(selectElement);
 
 // scooters
-const sccotersDisplay = document.querySelector(".sccotersdisplay");
-
-const scooters = [
-  {
-    name: "APACHE RR310",
-    engine: 321.2,
-    power: 34,
-    weight: 175,
-    img: "./assets/sccooter/jupiter-listing-home.webp",
-  },
-  {
-    name: "APACHE RTR 160 4V",
-    engine: 159.7,
-    power: 16.5,
-    weight: 143,
-    img: "./assets/sccooter/Ntorq-RE.png",
-  },
-  {
-    name: "hlx 150 5 gear",
-    engine: 147.49,
-    power: 8.9,
-    weight: 122,
-    img: "./assets/bike/H150-listing-home.webp",
-  },
-];
-
-let sccotersElement = "APACHE RR310";
-
-sccotersactive.forEach((swiper) => {
-  swiper.addEventListener("click", (e) => {
-    sccotersElement = e.target.parentElement.childNodes[1].innerText;
-    sccoterChange(sccotersElement);
-  });
+const scooters = vecicleDataList.filter((vecicleData) => {
+  return vecicleData.category === "sccoter";
 });
 
-function sccoterChange(selectElement) {
-  return scooters.forEach((sccoter) => {
-    if (selectElement == sccoter.name) {
-      sccotersDisplay.innerHTML = `  <div class="flex justify-evenly w-full">
+function SccoterSwipers() {
+  const sccoterDisplay = document.getElementById("sccoterDisplay");
+
+  const sccoterwipers = document.querySelectorAll(".sccoter-swiper");
+
+  sccoterwipers.forEach((swiper) => {
+    swiper.addEventListener("click", (e) => {
+      sccoterwipers.forEach((swiper) => {
+        swiper.classList.remove("active");
+      });
+      swiper.classList.add("active");
+      const selectedSccoterName = e.target
+        .querySelector("h3")
+        .innerText.split(" ")
+        .join("");
+      updateSccoterDisplay(selectedSccoterName);
+
+      sccoterimgChangeByColor();
+    });
+  });
+
+  // Display details of the first bike by default
+  if (scooters.length > 0) {
+    const firstSccoterName = (scooters[0].name + scooters[0].modal)
+      .split(" ")
+      .join("");
+    updateSccoterDisplay(firstSccoterName);
+  }
+
+  function updateSccoterDisplay(selectedSccoterName) {
+    const selectedSccoter = scooters.find((scooter) => {
+      const sccoterName = (scooter.name + scooter.modal).split(" ").join("");
+      return selectedSccoterName === sccoterName;
+    });
+
+    const colorBTngroup = selectedSccoter.imgWithColor
+      .map(
+        (color) =>
+          `<button id=${selectedSccoter.id}  name="${color.color}" class="w-5 h-5 bg-[${color.color}] sccoterColorBtn   rounded-full cursor-pointer"></button>`
+      )
+      .join(" ");
+
+    if (selectedSccoter) {
+      sccoterDisplay.innerHTML = `  <div ${selectedSccoter.id} class="flex justify-evenly w-full">
       <div class="flex flex-col items-center gap-2">
         <img
           class="md:w-16 w-10 md:h-14 h-9"
@@ -225,7 +469,7 @@ function sccoterChange(selectElement) {
         <p
           class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
         >
-          ${sccoter.engine} CC
+          ${selectedSccoter.engine} CC
         </p>
       </div>
       <div class="flex flex-col items-center gap-2">
@@ -242,7 +486,7 @@ function sccoterChange(selectElement) {
         <p
           class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
         >
-          ${sccoter.power} PS
+          ${selectedSccoter.power} PS
         </p>
       </div>
       <div class="flex flex-col items-center gap-2">
@@ -259,13 +503,16 @@ function sccoterChange(selectElement) {
         <p
           class="uppercase md:text-3xl text-xl text-white montserrat font-semibold"
         >
-          ${sccoter.weight} KG
+          ${selectedSccoter.weight} KG
         </p>
       </div>
       </div>
       <div>
-      <img src=${sccoter.img} alt="" />
+      <img class="sccoterImg w-[600px] h-[360px]" src=${selectedSccoter.imgWithColor[0].img} alt="" />
       </div>
+      <div class=" flex gap-2 ">
+    ${colorBTngroup}
+    </div>
       <div>
       <a
         href="#"
@@ -274,6 +521,40 @@ function sccoterChange(selectElement) {
       >
       </div>`;
     }
+  }
+}
+SccoterSwipers();
+sccoterimgChangeByColor();
+
+function sccoterimgChangeByColor() {
+  const sccoterColorBtn = document.querySelectorAll(
+    "#sccoterDisplay .sccoterColorBtn"
+  );
+
+  sccoterColorBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const color = e.target.getAttribute("name");
+
+      const id = e.target.getAttribute("id");
+      console.log(id, color);
+      const parent = e.target.parentElement.parentElement;
+      const imageElement = parent.querySelector(".sccoterImg");
+
+      const imageData = scooters.find(
+        (scooter) =>
+          scooter.id === parseInt(id) &&
+          scooter.imgWithColor.some((c) => c.color === color)
+      );
+
+      if (imageData) {
+        const selectedColorImage = imageData.imgWithColor.find(
+          (c) => c.color === color
+        );
+
+        if (imageElement && selectedColorImage) {
+          imageElement.src = selectedColorImage.img;
+        }
+      }
+    });
   });
 }
-sccoterChange(sccotersElement);

@@ -88,6 +88,10 @@ select {
   width: 70% !important;
 }
 
+.activeBtn {
+  border: 3px solid #f12b00;
+}
+
 @media only screen and (max-width: 768px) {
   .mySwiper4 {
     width: 100% !important;
