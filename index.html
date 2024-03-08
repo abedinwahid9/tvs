@@ -31,6 +31,139 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <div
+      data-aos-duration="3000"
+      data-aos="fade-up"
+      id="popup"
+      class="fixed shadow-md shadow-[#f12b00] z-50 montserrat bottom-5 left-5 bg-white w-[370px] rounded-md"
+    >
+      <div class="py-3 px-5">
+        <div class="flex justify-between items-center py-3">
+          <img class="w-20 h-10" src="./assets/logo/TVS-logo.png" alt="" />
+          <svg
+            id="cross"
+            class="w-5 h-5"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+          >
+            <path d="m4.12 6.137 1.521-1.52 7 7-1.52 1.52z" />
+            <path d="m4.12 11.61 7.001-7 1.52 1.52-7 7z" />
+          </svg>
+        </div>
+        <hr />
+        <h3 class="text-xl py-2 font-bold text-[#f12b00]">
+          Register for exciting offers!
+        </h3>
+        <div class="flex flex-col gap-1">
+          <label class="uppercase text-[#f12b00] text-sm">name *</label>
+          <input
+            placeholder="Enter Name"
+            class="border-gray-400 border-2 p-1 rounded-sm bg-[#F1F1F1]"
+            type="text"
+          />
+        </div>
+        <div class="flex flex-col gap-1 mt-1">
+          <label class="uppercase text-[#f12b00] text-sm">number *</label>
+
+          <div class="flex w-full">
+            <button
+              class="items-center w-[20%] border-gray-400 border-2 px-2 bg-[#F1F1F1] flex gap-1 rounded-sm"
+              href="#"
+            >
+              <img
+                class="w-6 h-6 rounded-full"
+                src="./assets/logo/saudi-arabia.png"
+                alt=""
+              />
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+                <path
+                  d="M6 8.707 1.293 4l1.414-1.414L6 7.172l4.293-4.293 1.414 1.414L6 8.707"
+                  fill="#000000"
+                  stroke="#000000"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </button>
+            <input
+              placeholder="Enter Mobile Number "
+              class="border-gray-400 border-2 p-1 w-[80%] rounded-sm bg-[#F1F1F1]"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 mt-1">
+          <label class="uppercase text-[#f12b00] text-sm">Interested In*</label>
+
+          <select class="border-gray-400 border-2 p-1 rounded-sm bg-[#F1F1F1]">
+            <option selected class="text-gray-400">-Choose a vehicles-</option>
+            <option value="Motorcycles">Apache RR 310</option>
+            <option value="Motorcycles">Apache RTR 160 4V</option>
+            <option value="Motorcycles">HLX 150 5 Gear</option>
+            <option value="Scooters">Ntorq 125 RE</option>
+            <option value="Scooters">Jupiter</option>
+          </select>
+        </div>
+        <div class="flex items-start gap-1 mt-3">
+          <input
+            type="checkbox"
+            name="checkbox"
+            value="value"
+            id="0"
+            class=""
+          />
+          <label for="0"
+            ><div class="text-gray-400 text-xs">
+              I have read and understood
+              <a
+                class="text-blue-900"
+                href="https://www.tvsmotor.com/en/sa/terms-and-conditions"
+                target="_blank"
+                >Terms &amp; Condition</a
+              >
+              and
+              <a
+                class="text-blue-900"
+                href="https://www.tvsmotor.com/en/sa/privacy-policy"
+                target="_blank"
+                >Privacy Policy</a
+              >
+              and agree to it.
+            </div></label
+          >
+        </div>
+        <div class="flex items-start gap-1 mt-3">
+          <input
+            type="checkbox"
+            name="checkbox"
+            value="value"
+            id="0"
+            class=""
+          />
+          <label for="0"
+            ><div class="text-gray-400 text-xs">
+              I authorize TVS Motor Company Ltd or its partners to contact for
+              marketing purposes.
+            </div></label
+          >
+        </div>
+      </div>
+      <div class="bg-[#F1F1F1] py-3 px-5 flex gap-2">
+        <button
+          id="cancel"
+          class="uppercase text-base bg-[#f12b00] text-white py-1 rounded-lg w-full font-semibold"
+        >
+          cancel
+        </button>
+        <button
+          id="submit"
+          class="uppercase text-base bg-[#f12b00] text-white py-1 rounded-lg w-full font-semibold"
+        >
+          submit
+        </button>
+      </div>
+    </div>
+
     <!-- navbar start -->
     <div class="bg-black nav fixed shadow-md shadow-black w-full z-50">
       <div

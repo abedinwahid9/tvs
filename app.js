@@ -3,6 +3,7 @@ window.onload = function () {
   sccoterDynamic();
   // Call the function once initially to set the initial state
   scrollNavhide();
+  crossBtn();
 };
 
 // just manage this data for show vehicle
@@ -190,6 +191,15 @@ const vecicleDataList = [
     ],
   },
 ];
+
+function crossBtn() {
+  const crossBtn = document.querySelector("#cross");
+  const popUp = document.querySelector("#popup");
+
+  crossBtn.addEventListener("click", () => {
+    popUp.classList.add("hidden");
+  });
+}
 
 // navbar toggler
 const toggleBtn = document.querySelector("#toggle-btn");

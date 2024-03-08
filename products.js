@@ -64,6 +64,7 @@ const vecicleDataList = [
     weight: 143,
     imgWithColor: [
       { color: "#f12b00", img: "./assets/bike/160-4V-Centre.png" },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
     ],
   },
   {
@@ -76,6 +77,7 @@ const vecicleDataList = [
     weight: 122,
     imgWithColor: [
       { color: "#f12b00", img: "./assets/bike/H150-listing-home.webp" },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
     ],
   },
   {
@@ -128,6 +130,7 @@ const vecicleDataList = [
         color: "#f1f1f1",
         img: "./assets/bike/H150-listing-home.webp",
       },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
     ],
   },
   {
@@ -162,6 +165,7 @@ const vecicleDataList = [
         color: "#f12b00",
         img: "./assets/sccooter/Ntorq-RE.png",
       },
+      { color: "#000000", img: "./assets/bike/green-160.png" },
     ],
   },
   {
