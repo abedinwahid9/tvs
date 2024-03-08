@@ -193,8 +193,13 @@ const vecicleDataList = [
 ];
 
 function crossBtn() {
+  const cancelBtn = document.querySelector("#cancel");
   const crossBtn = document.querySelector("#cross");
   const popUp = document.querySelector("#popup");
+
+  cancelBtn.addEventListener("click", () => {
+    popUp.classList.add("hidden");
+  });
 
   crossBtn.addEventListener("click", () => {
     popUp.classList.add("hidden");
