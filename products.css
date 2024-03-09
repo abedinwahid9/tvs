@@ -24,12 +24,12 @@ body {
 /* swiper style */
 
 .swiper {
-  width: 400px;
+  width: 370px;
   height: 600px;
 }
 
 .swiper-slide {
-  width: 380px !important;
+  width: 360px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,5 +51,5 @@ body {
 
 .active {
   background-color: #f12b00 !important;
-  width: 400px !important;
+  width: 370px !important;
 }

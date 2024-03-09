@@ -74,9 +74,9 @@
           <div class="flex">
             <input
               id="phone"
-              placeholder="Enter Mobile Number "
+              value="+966"
               class="border-gray-400 border-2 py-1 px-2 w-full rounded-sm bg-[#F1F1F1]"
-              type="text"
+              type="tel"
             />
           </div>
         </div>
@@ -1096,8 +1096,14 @@
     <script>
       const input = document.querySelector("#phone");
       window.intlTelInput(input, {
-        utilsScript:
-          "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js",
+        initialCountry: "auto",
+        geoIpLookup: (callback) => {
+          fetch("https://ipapi.co/json")
+            .then((res) => res.json())
+            .then((data) => callback(data.country_code))
+            .catch(() => callback("us"));
+        },
+        utilsScript: "/intl-tel-input/js/utils.js?1709392860975", // just for formatting/placeholders etc
       });
     </script>
   </body>

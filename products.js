@@ -1,3 +1,8 @@
+window.onload = function () {
+  virticul();
+  sliderDynamic();
+};
+
 // change this array data
 const vecicleDataList = [
   {
@@ -221,20 +226,22 @@ for (let i = 0; i < category.length; i++) {
 
 // swiper
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 5,
-  spaceBetween: 10,
-  loop: true,
-  direction: "vertical",
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiperbuttonnext",
-    prevEl: ".swiperbuttonprev",
-  },
-});
+function virticul() {
+  let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    loop: true,
+    direction: "vertical",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiperbuttonnext",
+      prevEl: ".swiperbuttonprev",
+    },
+  });
+}
 
 // dynamic bike show
 const bikeDisplay = document.querySelector(".bikedisplay");
@@ -262,6 +269,41 @@ sccotersactive.forEach((slide) => {
 const bikes = vecicleDataList.filter((vecicleData) => {
   return vecicleData.category === "motorbike";
 });
+
+// slider dynamic show
+
+function sliderDynamic() {
+  const motocycleSlide = document.querySelector(
+    ".myBikeSwiper .swiper-wrapper"
+  ); // Update the selector to target the swiper-wrapper
+
+  // Assuming 'bikes' is an array containing slide data
+  const firstBike = bikes[0];
+
+  const vehicleSlides = bikes.map((bike) => {
+    const bikeActive = firstBike.id === bike.id;
+
+    return `<div class="swiper-slide motorbike-swiper ${
+      bikeActive && "active"
+    } bg-white ">
+      <div class="flex py-1 gap-3 px-6 items-center justify-between">
+        <h3 class="text-xl font-semibold rounded-sm">${bike.name} ${
+      bike.modal
+    }</h3>
+        <img class="w-32 h-24" src="${bike.imgWithColor[0].img}" alt="" />
+      </div>
+    </div>`;
+  });
+
+  // Append the new slides to the Swiper container
+  motocycleSlide.innerHTML = vehicleSlides.join("");
+
+  // After adding new slides, update the Swiper instance
+  virticul();
+  bikeSwipers();
+}
+
+// Call sliderDynamic when you want to add new slides dynamically
 
 function bikeSwipers() {
   const bikeDisplay = document.getElementById("bikeDisplay");
@@ -373,8 +415,9 @@ function bikeSwipers() {
     }
   }
 }
-bikeSwipers();
+
 bikeimgChangeByColor();
+sliderDynamic();
 
 // bikeimgChangeByColor
 function bikeimgChangeByColor() {
@@ -411,10 +454,42 @@ const scooters = vecicleDataList.filter((vecicleData) => {
   return vecicleData.category === "sccoter";
 });
 
+function sliderSccoerDynamic() {
+  const sccoterSlide = document.querySelector(
+    ".mySccoterSwiper .swiper-wrapper"
+  );
+
+  const firstSccoter = scooters[0];
+
+  const vehicleSlides = scooters.map((scooter) => {
+    const sccooterActive = firstSccoter.id === scooter.id;
+
+    return `<div class="swiper-slide sccoter-swiper ${
+      sccooterActive && "active"
+    } bg-white ">
+      <div class="flex py-1 gap-3 px-6 items-center justify-between">
+        <h3 class="text-xl font-semibold rounded-sm">${scooter.name} ${
+      scooter.modal
+    }</h3>
+        <img class="w-32 h-24" src="${scooter.imgWithColor[0].img}" alt="" />
+      </div>
+    </div>`;
+  });
+
+  // Append the new slides to the Swiper container
+  sccoterSlide.innerHTML = vehicleSlides.join("");
+
+  // After adding new slides, update the Swiper instance
+  virticul();
+  SccoterSwipers();
+}
+
 function SccoterSwipers() {
   const sccoterDisplay = document.getElementById("sccoterDisplay");
 
   const sccoterwipers = document.querySelectorAll(".sccoter-swiper");
+
+  console.log(sccoterwipers);
 
   sccoterwipers.forEach((swiper) => {
     swiper.addEventListener("click", (e) => {
@@ -523,8 +598,9 @@ function SccoterSwipers() {
     }
   }
 }
-SccoterSwipers();
+
 sccoterimgChangeByColor();
+sliderSccoerDynamic();
 
 function sccoterimgChangeByColor() {
   const sccoterColorBtn = document.querySelectorAll(
