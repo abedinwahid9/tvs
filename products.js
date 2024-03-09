@@ -195,6 +195,17 @@ const vecicleDataList = [
   },
 ];
 
+// navbar toggler
+const toggleBtn = document.querySelector("#toggle-btn");
+const navbarDropdown = document.querySelectorAll(".navbarDropdown");
+
+toggleBtn.addEventListener("click", () => {
+  for (let i = 0; i < navbarDropdown.length; i++) {
+    navbarDropdown[i].classList.toggle("hidden");
+    navbarDropdown[i].classList.toggle("flex");
+  }
+});
+
 // explore our vechiles tab functionality
 const category = document.querySelectorAll(".category");
 
@@ -413,10 +424,10 @@ function bikeSwipers() {
       >
       </div>`;
     }
+    bikeimgChangeByColor();
   }
 }
 
-bikeimgChangeByColor();
 sliderDynamic();
 
 // bikeimgChangeByColor
@@ -488,8 +499,6 @@ function SccoterSwipers() {
   const sccoterDisplay = document.getElementById("sccoterDisplay");
 
   const sccoterwipers = document.querySelectorAll(".sccoter-swiper");
-
-  console.log(sccoterwipers);
 
   sccoterwipers.forEach((swiper) => {
     swiper.addEventListener("click", (e) => {
@@ -596,10 +605,10 @@ function SccoterSwipers() {
       >
       </div>`;
     }
+    sccoterimgChangeByColor();
   }
 }
 
-sccoterimgChangeByColor();
 sliderSccoerDynamic();
 
 function sccoterimgChangeByColor() {
@@ -612,7 +621,7 @@ function sccoterimgChangeByColor() {
       const color = e.target.getAttribute("name");
 
       const id = e.target.getAttribute("id");
-      console.log(id, color);
+
       const parent = e.target.parentElement.parentElement;
       const imageElement = parent.querySelector(".sccoterImg");
 
