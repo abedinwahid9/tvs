@@ -297,7 +297,7 @@ function sliderDynamic() {
     return `<div class="swiper-slide motorbike-swiper ${
       bikeActive && "active"
     } bg-white ">
-      <div class="flex py-1 gap-3 px-6 items-center justify-between">
+      <div class="flex py-1 md:gap-3 gap-2 md:px-6 px-3 items-center justify-between">
         <h3 class="text-xl font-semibold rounded-sm">${bike.name} ${
       bike.modal
     }</h3>
@@ -478,7 +478,7 @@ function sliderSccoerDynamic() {
     return `<div class="swiper-slide sccoter-swiper ${
       sccooterActive && "active"
     } bg-white ">
-      <div class="flex py-1 gap-3 px-6 items-center justify-between">
+      <div class="flex py-1 md:gap-3 gap-2 md:px-6 px-3 items-center justify-between">
         <h3 class="text-xl font-semibold rounded-sm">${scooter.name} ${
       scooter.modal
     }</h3>

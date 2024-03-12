@@ -53,3 +53,18 @@ body {
   background-color: #f12b00 !important;
   width: 370px !important;
 }
+
+@media only screen and (max-width: 380px) {
+  .swiper {
+    width: 350px;
+    height: 600px;
+  }
+
+  .swiper-slide {
+    width: 340px !important;
+  }
+
+  .active {
+    width: 350px !important;
+  }
+}
